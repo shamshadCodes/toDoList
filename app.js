@@ -30,26 +30,25 @@ function renderTodoList() {
     }
     li.addEventListener("click", toggleCompleted);
     todoList.appendChild(li);
-    }
-    }
-
-    // Toggle the completed status of a todo item
-    function toggleCompleted(event) {
-    const li = event.target;
-    const index = Array.from(todoList.children).indexOf(li);
-    todoItems[index].completed = !todoItems[index].completed;
-    localStorage.setItem("todoItems", JSON.stringify(todoItems));
-    renderTodoList();
-    }
-
-    // Handle form submission
-    todoForm.addEventListener("submit", event => {
-    event.preventDefault();
-    const text = todoInput.value;
-    todoInput.value = "";
-    addTodo(text);
-    });
-
-    // Render the initial todo list
-    renderTodoList();
+  }
 }
+
+// Toggle the completed status of a todo item
+function toggleCompleted(event) {
+  const li = event.target;
+  const index = Array.from(todoList.children).indexOf(li);
+  todoItems[index].completed = !todoItems[index].completed;
+  localStorage.setItem("todoItems", JSON.stringify(todoItems));
+  renderTodoList();
+}
+
+// Handle form submission
+todoForm.addEventListener("submit", event => {
+  event.preventDefault();
+  const text = todoInput.value;
+  todoInput.value = "";
+  addTodo(text);
+});
+
+// Render the initial todo list
+renderTodoList();
