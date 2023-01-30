@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+#todo-form {
+  text-align: center;
+}
+
+#todo-input {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-right: 8px;
+}
+
+#todo-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.todo-item:hover {
+  background-color: #f4f4f4;
+}
+
+.todo-item.completed {
+  text-decoration: line-through;
+  color: #ccc;
+}
