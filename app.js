@@ -1,11 +1,13 @@
 // Todo List App
 
 // Declare variables
-const todoForm = document.querySelector(".todo-form");
-const todoInput = document.querySelector(".todo-input");
-const todoList = document.querySelector(".todo-list");
+const todoForm = document.querySelector("#todo-form");
+const todoInput = document.querySelector("#todo-input");
+const todoList = document.querySelector("#todo-list");
 
 let todoItems = JSON.parse(localStorage.getItem("todoItems")) || [];
+
+console.log(todoForm, todoInput, todoList, todoItems)
 
 // Add a new todo item
 function addTodo(text) {
